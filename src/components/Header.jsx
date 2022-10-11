@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Header = () => {
@@ -13,10 +14,10 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/home'}>Home</Link>
-                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/quiz'}>Quiz</Link>
-                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/statistics'}>Statistics</Link>
-                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/blog'}>Blog</Link>
+                        <NavLink className='text-decoration-none fw-bold text-uppercase me-5' to={'/home'}>Home</NavLink>
+                        <NavLink className='text-decoration-none fw-bold text-uppercase me-5' to={'/quiz'}>Quiz</NavLink>
+                        <NavLink className='text-decoration-none fw-bold text-uppercase me-5' to={'/statistics'}>Statistics</NavLink>
+                        <NavLink className='text-decoration-none fw-bold text-uppercase me-5' to={'/blogs'}>Blog</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

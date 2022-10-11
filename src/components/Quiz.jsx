@@ -4,12 +4,13 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Options from './Options';
 import { EyeIcon } from '@heroicons/react/24/solid';
+import { removeTags } from '../utils/StringReplace';
 
-const Quiz = ({ questions }) => {
-
-    // console.log(questions)
+const Quiz = ({ questions,index }) => {
+    
     const { options, id, question, correctAnswer } = questions;
 
+    // check correct ans 
     const correctAnshandler = (option) => {
         if (correctAnswer === option) {
             toast.success("Ans is correct ", { autoClose: 1000 });
@@ -18,9 +19,21 @@ const Quiz = ({ questions }) => {
         }
     }
 
+    // show correct ans 
     const showCorrectAns = () => {
         toast.success(`Correct ans is : ${correctAnswer}`, { autoClose: 1000 });
     }
+
+
+    const ques = removeTags(question);
+    
+
+    // question dynamic serial
+
+    if (index >= 0) {
+        index += 1;
+    }
+   
 
     return (
         <Col>
@@ -28,7 +41,7 @@ const Quiz = ({ questions }) => {
 
                 <Card.Body>
                     <div className='relative'>
-                        <Card.Title className='text-center text-danger'>{question}</Card.Title>
+                        <Card.Title className='text-center text-danger'>Quiz No {index} : {ques}</Card.Title>
                         <EyeIcon onClick={showCorrectAns} style={{ width: "20px", position: 'absolute', top: '15', right: '0' }} />
 
                     </div>

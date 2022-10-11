@@ -7,12 +7,9 @@ const Home = () => {
 
     const topics = useContext(TopicsContext);
     const data = topics.data;
-    // console.log(data)
-
-
-
+   
     return (
-        <div>
+        <div className='mb-5'>
             <div className='container mb-4 mt-4'>
 
                 <Row xs={1} md={2} className="g-4">
