@@ -3,8 +3,9 @@
 
 The website has been developed to take online tests on various technologies. For example: Html, Css, JavaScript, React Js, Vuejs.
 
+## Live Website Link
 
-
+- https://charming-tulumba-5b6c63.netlify.app/
 
 ## Features
 
@@ -17,10 +18,11 @@ The website has been developed to take online tests on various technologies. For
 ## JS Library 
 - Reactjs is use for developed 
 
-## Modules
+## Packeges/Modules
 - React router dom
 - Rechart for make Dynamic Statistic Chart
 - Hero icon 
+- React Toastify
 
 
 

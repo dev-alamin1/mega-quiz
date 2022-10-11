@@ -3,7 +3,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const Blogs = () => {
     return (
-        <div className='mt-5 w-50 mx-auto'>
+        <div className='mt-5 w-75 mx-auto'>
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header> What is the pupose of React Router ? </Accordion.Header>
@@ -22,7 +22,7 @@ const Blogs = () => {
 
 
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header>How context api works ?</Accordion.Header>
+                    <Accordion.Header>What is useRef hook? </Accordion.Header>
                     <Accordion.Body>
                         useRef() hook helps us to access DOM nodes directly. In React, data-flow is unidirectional. If a child component in React, needs to update something in parent component, the parent needs to pass a reference to child. Child then uses the reference for updating the parent.
                             <br/> <br/>

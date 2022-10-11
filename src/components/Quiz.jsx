@@ -42,7 +42,7 @@ const Quiz = ({ questions,index }) => {
                 <Card.Body>
                     <div className='relative'>
                         <Card.Title className='text-center text-danger'>Quiz No {index} : {ques}</Card.Title>
-                        <EyeIcon onClick={showCorrectAns} style={{ width: "20px", position: 'absolute', top: '15', right: '0' }} />
+                        <EyeIcon onClick={showCorrectAns} style={{ width: "20px", position: 'absolute', top: '15', right: '5' }} />
 
                     </div>
                     <div className="row  row-cols-md-2 g-4">
