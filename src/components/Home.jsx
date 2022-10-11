@@ -1,10 +1,13 @@
+import React, { useContext } from 'react';
 import Row from 'react-bootstrap/Row';
-
+import QuestionTiopicsCard from './QuestionTiopicsCard';
+import { TopicsContext } from './Root';
 import { Col } from 'react-bootstrap';
-
-
 const Home = () => {
 
+    const topics = useContext(TopicsContext);
+    const data = topics.data;
+    // console.log(data)
 
 
 
@@ -28,6 +31,13 @@ const Home = () => {
 
             </div>
 
+            <div className='container'>
+                <Row xs={1} md={2} lg={4} className="g-4">
+                    {
+                        data.map(topic=><QuestionTiopicsCard key={topic.id} topic={topic}/>)
+                    }
+                </Row>
+             </div>
 
         </div>
     );
