@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const QuestionTiopicsCard = ({ topic }) => {
-    console.log(topic)
     const { id, logo, name, total } = topic;
     const navigate = useNavigate();
     const questionDetails = () => {

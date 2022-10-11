@@ -15,7 +15,7 @@ const Home = () => {
                 <Row xs={1} md={2} className="g-4">
                     <Col>
                         <div className='text-center mt-4'>
-                            <h2 className='fw-bolder'><span className='text-warning'>Hello Dev ,</span> <br /> <span className='underline'>Test Your Skill Here..</span></h2>
+                            <h2 className='fw-bolder'><span className='text-warning'>Hello Dev ,</span> <br /> <span className='underline'>Test Your Skills Here..</span></h2>
                         </div>
                     </Col>
 
