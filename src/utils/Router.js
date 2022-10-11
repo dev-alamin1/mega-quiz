@@ -36,7 +36,6 @@ export const router = createBrowserRouter([
         {
             //data statistics 
             path: '/statistics',
-            loader: ()=>{},
             element:<Statistics/>
         },
        
