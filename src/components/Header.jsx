@@ -15,8 +15,8 @@ const Header = () => {
                     <Nav className="ms-auto">
                         <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/home'}>Home</Link>
                         <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/quiz'}>Quiz</Link>
-                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/about'}>Statistice</Link>
-                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/about'}>About</Link>
+                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/statistics'}>Statistics</Link>
+                        <Link className='text-decoration-none fw-bold text-uppercase me-5' to={'/blog'}>Blog</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

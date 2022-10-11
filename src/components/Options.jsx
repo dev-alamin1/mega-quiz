@@ -2,8 +2,6 @@ import React from 'react';
 
 const Options = ({ option, correctAnshandler }) => {
 
-
-
     return (
         <div className="col">
             <div className="card ml-2 p-2">

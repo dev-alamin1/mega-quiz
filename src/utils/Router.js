@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Root from '../components/Root';
 import Quizs from '../components/Quizs';
 import Error from '../components/Error';
+import Statistics from '../components/Statistics';
 
 export const router = createBrowserRouter([
     {
@@ -31,9 +32,16 @@ export const router = createBrowserRouter([
          element:<Quizs/>
 
         },
+
+        {
+            //data statistics 
+            path: '/statistics',
+            loader: ()=>{},
+            element:<Statistics/>
+        },
        
         {
-          path:'/about',element:<div>About</div>
+          path:'/blogs',element:<div>Blogs</div>
         }
 
       ],
