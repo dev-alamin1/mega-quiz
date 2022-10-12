@@ -2,15 +2,18 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import Options from './Options';
+import QuizOptions from './QuizOptions';
 import { EyeIcon } from '@heroicons/react/24/solid';
 import { removeTags } from '../utils/StringReplace';
 
-const Quiz = ({ questions,index }) => {
+const Quiz = ({ questions, questionSerial }) => {
     
-    const { options, id, question, correctAnswer } = questions;
+    const { options, question, correctAnswer } = questions;
 
-    // check correct ans 
+    if (questionSerial >= 0) {
+        questionSerial += 1;
+    }
+
     const correctAnshandler = (option) => {
         if (correctAnswer === option) {
             toast.success("Ans is correct ", { autoClose: 1000 });
@@ -19,36 +22,26 @@ const Quiz = ({ questions,index }) => {
         }
     }
 
-    // show correct ans 
-    const showCorrectAns = () => {
+    const viewCorrectAnswer = () => {
         toast.success(`Correct ans is : ${correctAnswer}`, { autoClose: 1000 });
     }
 
-
     const ques = removeTags(question);
     
-
-    // question dynamic serial
-
-    if (index >= 0) {
-        index += 1;
-    }
-   
-
     return (
         <Col>
-            <Card style={{ width: "70%", margin: "0 auto" }}>
+            <Card style={{ width: "70%", margin: "0 auto" }} className='shadow-lg'>
 
                 <Card.Body>
                     <div className='relative'>
-                        <Card.Title className='text-center text-danger'>Quiz No {index} : {ques}</Card.Title>
-                        <EyeIcon onClick={showCorrectAns} style={{ width: "20px", position: 'absolute', top: '15', right: '5' }} />
+                        <Card.Title className='text-center text-secondary'>Qeustion <sup className='bg-primary text-white px-2 rounded'>{questionSerial}</sup> : {ques}   </Card.Title>
+                        <EyeIcon className='text-primary' onClick={viewCorrectAnswer} style={{ width: "20px", position: 'absolute', top: '15', right: '5' }} />
 
                     </div>
                     <div className="row  row-cols-md-2 g-4">
 
                         {
-                            options.map((option, index) => <Options key={index} option={option} correctAnshandler={correctAnshandler} />)
+                            options.map((option, index) => <QuizOptions key={index} option={option} correctAnshandler={correctAnshandler} />)
                         }
 
                     </div>

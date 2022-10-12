@@ -5,10 +5,11 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
 
-const QuestionTiopicsCard = ({ topic }) => {
+const TiopicsCard = ({ topic }) => {
     const { id, logo, name, total } = topic;
     const navigate = useNavigate();
-    const questionDetails = () => {
+    
+    const getSpecificQuiz = () => {
         navigate(`/quiz/${id}`);
     }
 
@@ -19,8 +20,8 @@ const QuestionTiopicsCard = ({ topic }) => {
                 <Card.Body className='d-flex justify-content-between align-items-center'>
 
                     <div><h5>{name}</h5></div>
-                    <div><span className='text-danger fw-bold'>Total</span>: {total}</div>
-                    <div><Button variant="info" className='fw-bolder text-white' onClick={questionDetails}>Practice</Button></div>
+                    <div className='text-danger'>Quiz <sup className='bg-primary text-white fw-bold rounded px-1'> {total}</sup></div>
+                    <div><Button variant="info" className='fw-bolder text-white' onClick={getSpecificQuiz}>Practice</Button></div>
 
                 </Card.Body>
             </Card>
@@ -28,4 +29,4 @@ const QuestionTiopicsCard = ({ topic }) => {
     );
 };
 
-export default QuestionTiopicsCard;
+export default TiopicsCard;

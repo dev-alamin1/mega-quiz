@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Row from 'react-bootstrap/Row';
-import QuestionTiopicsCard from './QuestionTiopicsCard';
+import TiopicsCard from './TiopicsCard';
 import { TopicsContext } from './Root';
 import { Col } from 'react-bootstrap';
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
             <div className='container'>
                 <Row xs={1} md={2} lg={4} className="g-4">
                     {
-                        data.map(topic=><QuestionTiopicsCard key={topic.id} topic={topic}/>)
+                        data.map(topic=><TiopicsCard key={topic.id} topic={topic}/>)
                     }
                 </Row>
              </div>

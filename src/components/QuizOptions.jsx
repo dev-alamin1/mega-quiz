@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Options = ({ option, correctAnshandler }) => {
+const QuizOptions = ({ option, correctAnshandler }) => {
 
     return (
         <div className="col">
@@ -16,4 +16,4 @@ const Options = ({ option, correctAnshandler }) => {
     );
 };
 
-export default Options;
+export default QuizOptions;
