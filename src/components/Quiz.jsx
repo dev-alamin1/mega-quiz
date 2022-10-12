@@ -16,14 +16,14 @@ const Quiz = ({ questions, questionSerial }) => {
 
     const correctAnshandler = (option) => {
         if (correctAnswer === option) {
-            toast.success("Ans is correct ", { autoClose: 1000 });
+            toast.success("Ans is correct ", { autoClose: 2000 });
         } else {
-            toast.warning("Ans is False ", { autoClose: 1000 });
+            toast.warning("Ans is False ", { autoClose: 2000 });
         }
     }
 
     const viewCorrectAnswer = () => {
-        toast.success(`Correct ans is : ${correctAnswer}`, { autoClose: 1000 });
+        toast.info(`Correct ans is : ${correctAnswer}`, { autoClose: 3000 });
     }
 
     const ques = removeTags(question);
