@@ -5,7 +5,7 @@ The website has been developed to take online tests on various technologies. For
 
 ## Live Website Link
 
-- https://charming-tulumba-5b6c63.netlify.app/
+- https://dev-quizs-test.netlify.app/
 
 ## Features
 
